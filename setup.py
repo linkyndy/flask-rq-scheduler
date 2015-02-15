@@ -25,6 +25,7 @@ setup(
     install_requires=[
         'flask >= 0.9',
         'flask-rq',
+        'rq-scheduler'
     ],
     classifiers=[
         'Environment :: Web Environment',
