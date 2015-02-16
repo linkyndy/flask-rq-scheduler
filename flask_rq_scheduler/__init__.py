@@ -3,7 +3,7 @@ from rq_scheduler import Scheduler
 
 
 def get_scheduler(queue='default'):
-    return Scheduler(get_queue(queue), connection=get_connection(queue))
+    return Scheduler(queue, connection=get_connection(queue))
 
 
 def scheduled_job(func_or_queue=None):
