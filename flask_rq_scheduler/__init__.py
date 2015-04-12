@@ -2,8 +2,8 @@ from flask.ext.rq import get_connection, get_queue
 from rq_scheduler import Scheduler
 
 
-def get_scheduler(queue='default'):
-    return Scheduler(queue, connection=get_connection(queue))
+def get_scheduler(queue='default', interval=60):
+    return Scheduler(queue, interval, connection=get_connection(queue))
 
 
 def scheduled_job(func_or_queue=None):
